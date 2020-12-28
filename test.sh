@@ -29,7 +29,7 @@ do
         #grep $i logfile | wc -l
         echo "hello" && echo $j
         else 
-        echo $j
+        echo "this is $j"
         fi
     done
     #grep $i logfile | wc -l
