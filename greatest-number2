@@ -1,0 +1,29 @@
+#!/bin/bash
+
+## This script is used for finding largest number among N numbers
+
+read -r -p "how many numbers you want to check: " N
+
+max=0
+
+i=1
+
+#read -r -p "Now Enter the numbers: " num
+while [ $i -le $N ]
+do
+	read -r -p "Now Enter the numbers: " num
+	if [ $i -eq 1 ]		# this section will make the first number to max
+	then
+		max=$num
+	else
+		if [ $num -gt $max ]
+		then
+			max=$num
+		fi
+	fi
+	i=`expr $i + 1`
+	#i=$((i+1))
+done
+
+echo "max is: " $max
+ 

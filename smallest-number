@@ -1,0 +1,22 @@
+#!/bin/bash
+
+read -r -p "enter how many numbers you want to check for smallest number: " N
+
+min=0
+
+echo "enter the $N numbers: "
+
+for ((i=0; i<$N; i++))			# here begins the for loop, which will run till $N number of times
+do
+	read num			# lets start reading number here, actually numbers will start getting requested from user, from right here within the loop
+	if [ $i -eq 0 ]			# $i which is, the 0th element of the numbers you enter, if equal to 0, minimum is set to that. 
+	then
+	min=$num			# setting first number as minimum
+	else
+		if [ $num -lt $min ]	# if 
+		then
+		min=$num
+		fi
+	fi
+done
+echo "min is " $min

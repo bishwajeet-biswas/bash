@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "enter the numbers"
+read -a arr
+sum=0
+for i in ${arr[@]}
+do
+	let sum+=$i
+done
+echo "sum of your numbers entered is $sum"

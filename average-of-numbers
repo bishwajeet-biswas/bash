@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -r -p "Tell me how many numbers you want to get average of: " N
+
+i=1
+sum=0
+
+while [ $i -le $N ]
+do
+	read -r -p "Now Enter the numbers: " num
+	sum=$(($sum + $num))
+	i=`expr $i + 1`
+done
+
+avg=$(echo $sum / $N | bc -l)
+
+echo "average of your numbers" $avg

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -r -p "enter the number: " num
+
+sum=0
+
+while [ $num -gt 0 ]
+do
+	mod=$(($num % 10))	# this will break down the number to digits, eg 123 | 12%10=2 | 1%10=1
+	sum=$(($sum + $mod))	# initially this will add 0 +3 | 3+2 | 5+1=6
+	num=$(($num / 10))	# this will deduce the number to tens place here, 123/10=12 | 12/10=1 | 1/10=0 | since the loop is for num>0 loop will break
+done
+
+echo "sum of digit is" $sum

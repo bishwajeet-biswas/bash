@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#ping -c1 192.10.10.10
+#ping -c1 192.168.1.1
+#read -r -p "please enter ip you want to ping test :" host
+#host="192.168.1.1"
+
+host="/home/jeet/Desktop/scripts/practice-new/hosts.list"
+
+for ip in $(cat $host)
+do
+	ping -c1 $ip &> /dev/null
+	if [ $? -eq 0 ]
+	then
+	echo $ip OK
+	else
+	echo $ip NOT OK
+	fi
+done
+

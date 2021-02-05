@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+#arr=(10 20 30 40)			# using predefined values
+
+#read -r -p "Please enter the numbers: " arr	# this won't work for reading array as input. hence this is commented
+echo "Enter the numbers"
+read -a arr				# it is important to note here, that for array and to read as input, "-a" is used
+
+sum=0
+
+for i in ${arr[@]}
+do
+	#sum=`expr $sum + $i`		# using expr
+	sum=$(($sum + $i))		# using sum
+	#let sum+=$i			# using Let -->  Let command is used to evaluate arithmatic expresssions on shell variable. 
+					# example, --$ let "myvar =2" "myvar1=1" "myvar2=myvar1+myvar"; echo $myvar2
+done
+echo $sum

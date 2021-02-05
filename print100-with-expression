@@ -1,0 +1,11 @@
+#!/bin/bash
+
+i=1
+## when '-lt' is used, script will print 1-99
+## when '-le' is used, script will print 1-100
+while [ $i -lt 100 ]   
+do
+   echo $i
+   i=`expr $i + 1`
+done
+

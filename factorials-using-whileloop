@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read -r -p "please enter the number whose factorials you want: " N
+
+fact=1
+
+while [ $N -gt 1  ]
+do
+	fact=$((fact * N))
+	N=$((N - 1))
+done
+echo $fact

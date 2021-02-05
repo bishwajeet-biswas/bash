@@ -1,0 +1,12 @@
+#!/bin/bash
+
+read -r -p "how many numbers you want to find sum of: " N
+
+sum=0
+
+for ((i=0; i<$N; i++))
+do
+	read -r -p "enter the $N numbers: " num
+	let sum+=$num
+done
+echo "sum of your numbers is: " $sum

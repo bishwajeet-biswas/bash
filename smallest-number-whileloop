@@ -1,0 +1,37 @@
+#/bin/bash
+
+read -r -p "Among how many numbers you want to compare the smallest number: " N
+
+min=0
+i=0
+while [ $i -lt $N  ]
+do
+	read -r -p "enter the numbers now: " num
+	if [ $i -eq 0  ]
+	then 
+	min=$num
+	else
+		if [ $num -lt $min ]
+		then
+		min=$num
+		fi
+	fi
+	i=$(($i + 1))
+done
+
+#for ((i=0; i<$N; i++))
+#do
+#	echo "Enter the numbers now: "
+#	read num
+#	if [ $i -eq 0 ]
+#	then
+#	min=$num
+#	else
+#		if [ $num -lt $min ]
+#		then
+#		min=$num
+#		fi
+#	fi
+#done
+
+echo "Minumum number is: " $min

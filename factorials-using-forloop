@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -r -p "please enter a number: " N
+
+fact=1
+
+for ((i=1; N>1; i++))
+do
+	fact=$(($fact * $N))
+	N=$(($N - 1))
+done
+
+echo $fact
